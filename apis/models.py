@@ -10,6 +10,8 @@ class GeeksModel(models.Model):
     image_link = models.URLField(max_length = 200)
     image_link_1 = models.URLField(max_length = 200)
     image_link_2 = models.URLField(max_length = 200)
+    category = models.CharField(max_length=200, null=True, blank=True)
+    countInStock = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
         return self.title
